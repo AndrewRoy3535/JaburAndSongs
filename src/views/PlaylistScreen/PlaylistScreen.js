@@ -5,11 +5,9 @@ import {
   SafeAreaView,
   TouchableOpacity,
   TextInput,
-  ScrollView,
   FlatList,
-  ActivityIndicator,
 } from 'react-native';
-import React, {useContext, useMemo, useCallback} from 'react';
+import React, {useContext} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Contextprovider} from '../../Context/Context';
@@ -17,15 +15,12 @@ import {Contextprovider} from '../../Context/Context';
 function PlaylistScreen({navigation}) {
   const context = useContext(Contextprovider);
   const {
-    audio,
     currentTrack,
     togglePlaybtn,
     playbyId,
     audioFilter,
-    setState,
     audioSearch,
     onSearchEnter,
-    testbook,
   } = context;
 
   function renderItem(item) {
@@ -51,9 +46,6 @@ function PlaylistScreen({navigation}) {
       </TouchableOpacity>
     );
   }
-
-  // const memoizedValue = useMemo(() => renderItem, [audio]);
-  // const memoizedValue = useCallback(item => renderItem(item), [audioFilter]);
 
   function keyExtractor(item) {
     return item._id;

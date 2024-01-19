@@ -1,4 +1,4 @@
-package com.jaburandsongs
+package com.jaburandsongs.app
 
 import android.app.Application
 import com.facebook.react.PackageList
