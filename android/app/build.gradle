@@ -75,9 +75,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.jaburandsongs"
+    namespace "com.jaburandsongs.app"
     defaultConfig {
-        applicationId "com.jaburandsongs"
+        applicationId "com.jaburandsongs.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 8
